@@ -1,1 +1,1 @@
-NFT Preview Card
+Equilibrium NFT Preview Card
