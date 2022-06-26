@@ -14,29 +14,60 @@ p {
 .main-nft {
     background: hsl(217, 54%, 11%);
     display: flex;
+    height: 90vh;
 }
 
 .nft-card {
     background: hsl(216, 50%, 16%);
-    margin: 1rem auto;
+    margin: auto;
     flex-direction: column;
-    max-width: 300px;
-    border-radius: 0.5rem;
+    max-width: 20rem;
+    border-radius: 0.5rem;  
+    height: auto; 
+}
+
+.nft-details {
+    margin: 1rem; 
+}
+
+.container {
+    position: relative;
 }
 
 .nft-image {
     width: 100%;
     border-radius: 1rem;
-}   
-
-.nft-details {
-    margin: 1rem;
 }
+
+.overlay-effect {
+    visibility: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 1rem;
+    transition: visibility ease-in .25s;
+    cursor: pointer;
+}
+
+.overlay {
+    width: 25%;
+    margin-top: 37.5%;
+    margin-left: 37.5%;
+}
+
+.container:hover .overlay-effect {
+    visibility: visible;
+    background: hsla(178, 100%, 50%, 0.4);
+}
+
 
 .nft-name {
     font-weight: 600;
     margin: 1rem 0;
-    color: hsla(216, 100%, 97%, 0.9);
+    color: hsla(216, 100%, 97%, 1);
 }
 
 .nft-info {
@@ -76,7 +107,7 @@ p {
     display: flex;
     flex-direction: row;
     align-items: center;
-    color:hsla(216, 100%, 97%, 0.9);
+    color:hsla(216, 100%, 97%, 1);
 }
 
 .avartar-img {
@@ -90,7 +121,10 @@ p {
     color: hsla(215, 47%, 68%, 0.75);
 }
 
-
+.nft-name:hover, .creator-name:hover {
+    cursor: pointer;
+    color: hsl(178, 100%, 50%);
+}
 
 
 
